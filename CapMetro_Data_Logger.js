@@ -68,12 +68,7 @@ function requestStop(stop_id){
 
             function pushToArray(hours_part, minutes_part, seconds_part, delay, route, curr, stop_id) {
                 var CurrentDate = moment().format('MM/DD/YYYY');
-		if(typeof curr == 'undefined') {
-			var formattedTime = ("Date: " + CurrentDate + ', Route: ' + route + ", Scheduled Arrival: " + hours_part + ':' + minutes_part.substr(-2) + ':' + seconds_part + ', Delay (in seconds): ' + delay + '\r\n');
-                }
-		else {
-			var formattedTime = (CurrentDate + ', ' + route + ", " + curr + ', ' + hours_part + ':' + minutes_part.substr(-2) + ':' + seconds_part + ', ' + delay + '\r\n');
-                }
+		var formattedTime = ("Date: " + CurrentDate +  ', Weather: ' + global.curr + ', Route: ' + route + ", Scheduled Arrival: " + hours_part + ':' + minutes_part.substr(-2) + ':' + seconds_part + ', Delay (in seconds): ' + delay + '\r\n');
 		fs.appendFile('log' + stop_id.toString() + '.txt', formattedTime, function (err) {
                     if (err)
                         return console.log(err);
