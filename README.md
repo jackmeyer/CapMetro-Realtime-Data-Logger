@@ -1,4 +1,4 @@
-# CapMetro-real-time-log
+# CapMetro Realtime Data Logger
 A Node.js script that retrieves real-time CapMetro bus position data and outputs upcoming arrival times (including delay) for a specified bus stop. This script is useful for analyzing when and why arrivals at a bus stop might be delayed and can be used for long-term data logging and mining. Realtime data for this project is acquired from [data.texas.gov](https://data.texas.gov/Transportation/CMTA-Trip-Updates-PB-File/rmk2-acnw) and is in the [General Transit Feed Specification](https://developers.google.com/transit/gtfs-realtime/) format.
 
 ## Dependencies:
